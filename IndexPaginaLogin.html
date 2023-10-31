@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Página de Cadastro</title>
+    <title>Página de Login</title>
     <link rel="stylesheet" href="CssPaginaCadastro.css">
 </head>
 <body>
-    <h1>Cadastro de Usuário</h1>
+    <h1>Login do Usuário</h1>
+
+    <main>
+        <form action="processar_cadastro.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br><br>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required><br><br>
+            
+            <input type="submit" id="Cadastro" value="Cadastrar">
+        </form>
+    </main>
+
+    <button><a href="pergunta01.html" target="_blank">Ir para próxima página!</a></button>
     
-    <form action="processar_cadastro.php" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
-        
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" value="E-mail:" required><br><br>
-        
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" name="senha" value="Senha" required><br><br>
-        
-        <input type="submit" value="Cadastrar">
-    </form>
-    
-    <a href="outra_pagina.html">Ir para Outra Página</a>
+    <script>
+        const NomeRegistrado = "Nome de usuario";
+        const EmailRegistrado = "emailregistrado@gmail.com";
+        const SenhaRegistrada = "teste";
+
+        function VerificacaoDeLogin() {
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            if (nome === NomeRegistrado && senha === SenhaRegistrada && email === EmailRegistrado) {
+                document.getElementById("mensagem").innerHTML = "Login bem-sucedido!";
+            } else {
+                document.getElementById("mensagem").innerHTML = "Credenciais inseridas incorretamente. Insira as corretamente e tente novamente";
+            }
+        }
+    </script>
 </body>
 </html>

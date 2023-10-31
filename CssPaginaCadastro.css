@@ -8,57 +8,77 @@ body{
     background: linear-gradient(90deg, rgba(252,158,69,0.9752275910364145) 23%, rgba(253,29,29,1) 47%, rgba(164,29,253,1) 75%);
     color: white;   
     text-shadow: 0.1em 0.1em 0.2em black;
- 
+    justify-content: center;
  }
  
  main{
+    padding: 2.5%;
+    padding: 50px 10px;
     margin-top: 5%;
-    margin-top: auto;  
- }
- 
- p{
-    font-size: 80px;
-    margin: 2%;
-    padding: 3% 2%;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.781);
-    text-shadow: 0.1em 0.1em 0.2em black;
- }
- 
- button{
-    font-size: 30px;
-    font-family: 'Yeseva One', cursive;
-    margin: 1%;
-    padding: 1.5% 5%;
-    border-radius: 15px;
-    border: 0px;
-    color: white; 
-    width: 19%;
- }
- 
- button:hover{
-    transform: scale(1.04);
-    transition: 60ms all;
-    cursor: pointer;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: rgba(245, 245, 245, 0.80);
+    border-radius: 2%;
  }
  
  h1{
-    font-size: 3em;
+    font-size: 4em;
  }
- 
- #cadastrar{
-    background-color: rgba(255, 255, 255, 0.685);
-    padding: 50 100 50 100;
-    text-shadow: 0.1em 0.1em 0.2em black;
+
+ label{
+   font-size: 3.5em;
+   margin: 1.5%;
  }
- 
- #entrar{
-    background-color: rgba(255, 255, 255, 0.685);
-    margin-bottom: 19%;
-    padding: 50 100 50 100;
-    text-shadow: 0.1em 0.1em 0.2em black;
+
+ input{
+   margin: 1.5%;
+   padding: 1%;
+   font-size: 2.7em;
+   border-radius: 10px;
+   color: rgb(30, 30, 30);
+   background-color: white;
+   border: 5px;
+   border: solid;
+   border-color: black;
  }
- 
- .login{
-    margin-top: 5%;   
+
+ #Cadastro{
+   margin-top: 5%;
+   padding: 15px;
+   color: white;
+   background-color: rgb(32, 32, 32);
  }
+
+ #Cadastro:hover{
+   transform: scale(1.03);
+   transition: 60ms all;
+   cursor: pointer;
+ }
+
+
+ button{
+   font-size: 30px;
+   font-family: 'Yeseva One', cursive;
+   margin: 1%;
+   padding: 1.5% 5%;
+   border-radius: 15px;
+   border: 0px;
+   width: 19%;
+   background-color: rgb(32, 32, 32);
+}
+
+button:hover{
+   transform: scale(1.03);
+   transition: 60ms all;
+   cursor: pointer;
+}
+
+a{
+   text-decoration: none;
+   color: white;
+}
+
+a:hover{
+   transition: all 0.5s;
+   color: grey;
+}

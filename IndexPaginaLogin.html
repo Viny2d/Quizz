@@ -8,38 +8,42 @@
     <h1>Login do Usuário</h1>
 
     <main>
-        <form action="processar_cadastro.php" method="post">
+        <form action="processar_cadastro.php" method="post" onsubmit="return VerificacaoDeLogin();">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required><br><br>
             
-            <label for="email">E-mail:</label>
+            <label for "email">E-mail:</label>
             <input type="email" id="email" name="email" required><br><br>
             
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required><br><br>
             
             <input type="submit" id="Cadastro" value="Cadastrar">
-            
         </form>
+        
+        <div id="mensagem"></div>
     </main>
 
-    <!--<button><a href="pergunta01.html" target="_blank">Ir para próxima página!</a></button> -->
-    
     <script>
-        const NomeRegistrado = "Nome de usuario";
-        const EmailRegistrado = "emailregistrado@gmail.com";
-        const SenhaRegistrada = "teste";
+        const usuarioRegistrado = {
+            Nome: "Nome de usuario",
+            Email: "emailregistrado@gmail.com",
+            Senha: "teste"
+        };
 
         function VerificacaoDeLogin() {
-            const nome = document.getElementById("nome").value;
-            const email = document.getElementById("email").value;
-            const senha = document.getElementById("senha").value;
+            const nomeInserido = document.getElementById("nome").value;
+            const emailInserido = document.getElementById("email").value;
+            const senhaInserida = document.getElementById("senha").value;
 
-            if (nome === NomeRegistrado && senha === SenhaRegistrada && email === EmailRegistrado) {
-                window.location.href= "pergunta01.html"
+            if (nomeInserido === usuarioRegistrado.Nome && senhaInserida === usuarioRegistrado.Senha && emailInserido === usuarioRegistrado.Email) {
                 document.getElementById("mensagem").innerHTML = "Login bem-sucedido!";
+                // Redireciona para outra página após a validação bem-sucedida
+                window.location.href = "pergunta01.html";
+                return false; // Impede o envio do formulário
             } else {
                 document.getElementById("mensagem").innerHTML = "Credenciais inseridas incorretamente. Insira as corretamente e tente novamente";
+                return false; // Impede o envio do formulário
             }
         }
     </script>

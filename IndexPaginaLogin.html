@@ -19,10 +19,11 @@
             <input type="password" id="senha" name="senha" required><br><br>
             
             <input type="submit" id="Cadastro" value="Cadastrar">
+            
         </form>
     </main>
 
-    <button><a href="pergunta01.html" target="_blank">Ir para próxima página!</a></button>
+    <!--<button><a href="pergunta01.html" target="_blank">Ir para próxima página!</a></button> -->
     
     <script>
         const NomeRegistrado = "Nome de usuario";
@@ -35,6 +36,7 @@
             const senha = document.getElementById("senha").value;
 
             if (nome === NomeRegistrado && senha === SenhaRegistrada && email === EmailRegistrado) {
+                window.location.href= "pergunta01.html"
                 document.getElementById("mensagem").innerHTML = "Login bem-sucedido!";
             } else {
                 document.getElementById("mensagem").innerHTML = "Credenciais inseridas incorretamente. Insira as corretamente e tente novamente";
